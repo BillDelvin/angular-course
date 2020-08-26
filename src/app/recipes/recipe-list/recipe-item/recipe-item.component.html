@@ -1,1 +1,18 @@
-<p>recipe-item works!</p>
+<a
+  href="#"
+  class="list-group-item text-decoration-none"
+  (click)="onSelect(recipe)"
+>
+  <div class="media">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ recipe.name }}</h5>
+      {{ recipe.description }}
+    </div>
+    <img
+      [src]="recipe.imagePath"
+      class="ml-3 img-responsive"
+      [alt]="recipe.name"
+      style="max-height: 50px;"
+    />
+  </div>
+</a>
