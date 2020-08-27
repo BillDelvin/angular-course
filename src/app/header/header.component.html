@@ -14,13 +14,17 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" (click)="onSelect('recipe')">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/recipes" routerLinkActive="active">
           Recipes <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" (click)="onSelect('shopping-list')">
+        <a
+          class="nav-link"
+          routerLink="/shopping-list"
+          routerLinkActive="active"
+        >
           Shopping List
         </a>
       </li>
