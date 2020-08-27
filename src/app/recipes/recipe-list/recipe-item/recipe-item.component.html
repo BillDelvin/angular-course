@@ -1,8 +1,4 @@
-<a
-  href="#"
-  class="list-group-item text-decoration-none"
-  (click)="onSelect(recipe)"
->
+<a href="#" class="list-group-item text-decoration-none" (click)="onSelect()">
   <div class="media">
     <div class="media-body">
       <h5 class="mt-0 mb-1">{{ recipe.name }}</h5>
@@ -12,7 +8,7 @@
       [src]="recipe.imagePath"
       class="ml-3 img-responsive"
       [alt]="recipe.name"
-      style="max-height: 50px;"
+      style="max-height: 50px"
     />
   </div>
 </a>
