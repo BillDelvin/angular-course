@@ -1,7 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -33,9 +34,10 @@ import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
