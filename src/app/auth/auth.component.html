@@ -1,1 +1,50 @@
-<p>auth works!</p>
+<div class="row">
+  <div class="col-md-12">
+    <div *ngIf="error" class="alert alert-danger">
+      {{ error }}
+      <!-- <button class="btn btn-outline-danger mr-auto" (click)="onClearError()">
+        X
+      </button> -->
+    </div>
+    <div class="text-center" *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+      <div class="form-group">
+        <label for="email">Email : </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          ngModel
+          required
+          email
+        />
+        <label for="password">Password : </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          ngModel
+          required
+          minlength="5"
+        />
+      </div>
+      <div>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!authForm.valid"
+        >
+          {{ isLoginMode ? "Login" : "Register" }}
+        </button>
+        &nbsp;
+        <button class="btn btn-success" type="button" (click)="onSwithcMode()">
+          {{ isLoginMode ? "Switch to Register" : "Switch to login " }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
