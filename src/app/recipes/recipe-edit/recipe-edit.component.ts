@@ -97,6 +97,13 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     (<FormArray>this.recipeForm.get("ingredients")).push(addIng);
   }
 
+  onDeleteIngredient(index: number) {
+    console.log(index);
+    // for remove all item in array
+    // (<FormArray>this.recipeForm.get("ingredients")).clear(index);
+    (<FormArray>this.recipeForm.get("ingredients")).removeAt(index);
+  }
+
   onCancel() {
     // this.router.navigate(["/recipes", this.id], { relativeTo: this.route });
     this.router.navigate(["../"], { relativeTo: this.route });
