@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
+import { AuthComponent } from "./auth/auth.component";
+
 import { RecipesResolverService } from "./recipes/recipes-resolver.service";
 import { RecipesComponent } from "./recipes/recipes.component";
 import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
@@ -11,6 +13,7 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "recipes", pathMatch: "full" },
+  { path: "auth", component: AuthComponent },
   {
     path: "recipes",
     component: RecipesComponent,
