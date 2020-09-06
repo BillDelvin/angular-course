@@ -1,11 +1,14 @@
+<ng-template appPlaceholder></ng-template>
 <div class="row">
   <div class="col-md-12">
-    <div *ngIf="error" class="alert alert-danger">
+    <!-- <div *ngIf="error" class="alert alert-danger">
       {{ error }}
-      <!-- <button class="btn btn-outline-danger mr-auto" (click)="onClearError()">
-        X
-      </button> -->
-    </div>
+    </div> -->
+    <!-- <app-alert
+      [message]="error"
+      *ngIf="error"
+      (close)="onHandleError()"
+    ></app-alert> -->
     <div class="text-center" *ngIf="isLoading">
       <app-loading-spinner></app-loading-spinner>
     </div>
