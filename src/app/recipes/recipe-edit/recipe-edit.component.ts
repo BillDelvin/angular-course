@@ -3,8 +3,6 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { FormGroup, FormControl, FormArray, Validators } from "@angular/forms";
 import { RecipesService } from "../recipes.service";
-import { Ingredient } from "src/app/shared/ingredient.model";
-import { Recipes } from "../recipes.model";
 
 @Component({
   selector: "app-recipe-edit",
